@@ -3,8 +3,10 @@ import './JobListings.scss';
 
 const JobListings = () => {
         return (
-            <div>
+            <div className='container'>
+                <div className='row'>
                 Test
+                </div>
             </div>
         );
     };
