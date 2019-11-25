@@ -1,0 +1,25 @@
+@import '../../../src/styles/Breakpoints.scss';
+
+.hero-wrapper {
+  background-image: linear-gradient(to top, rgba(33, 41, 46, 0.5) 0%, rgba(16, 18, 29, 0.8) 30%), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-input-root {
+  background-color: #5AAEC2 !important;
+  border-radius: 3px;
+  border: 1px solid white !important; 
+  margin: 0 10px !important;
+}
+
+.button-root {
+  background-color: rgb(243, 90, 34) !important;
+  padding: 18.5px 30px !important;
+  margin-left: 10px !important;
+  letter-spacing: 1px !important;
+}

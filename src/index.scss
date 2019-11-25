@@ -1,0 +1,28 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body, h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  p {
+    margin: 0px;
+  }
+
+  .container {
+      max-width: 1400px;
+      margin: 0px auto;
+  }
+
+  .row {
+    max-width: 1180px;
+    margin: 0px auto;
+  }
