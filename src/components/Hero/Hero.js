@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from "@material-ui/icons/Add";
 import { makeStyles } from "@material-ui/core/styles";
+import { jobsScraping } from '../../scraper';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -43,6 +44,8 @@ const Hero = () => {
   const showOptions = () => {
     setShowButtonContent(!showButtonContent);
   };
+
+  jobsScraping("https://de.indeed.com/jobs?q=developer&l=Berlin").then(res => console.log(res));
 
   let buttonContent;
   if (showButtonContent) {
