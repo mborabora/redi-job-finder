@@ -15,11 +15,10 @@
     padding: 20px;
     margin: 15px 20px;
     border-radius: 5px;
-}
-
-.card-wrapper:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+  }
 
 .card-location {
     font-size: small;
