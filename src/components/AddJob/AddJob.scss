@@ -1,0 +1,66 @@
+@import '../../../src/styles/Breakpoints.scss';
+@import '../../../src/styles/Colors.scss';
+
+.hero-addJob {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+.modal-container {
+  animation: moveInButton 0.5s ease-out;
+  animation-fill-mode: backwards;
+  background-color: $dark-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15px;
+  padding: 50px 30px;
+  height: 350px;
+  width: 250px;
+  position: absolute;
+  bottom: 100px;
+  right: 0;
+  box-shadow: 0 .5rem 4rem rgba(0, 0, 0, 0.5);
+}
+
+.modal-headline {
+  text-align: center;
+  color: $light-grey;
+}
+
+.addJob-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($redi-blue, .8);
+  border: 1px solid $redi-blue;
+  border: none;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  box-shadow: 0 .5rem   1rem rgba(0, 0, 0, 0.5);
+  &:hover {
+    background-color: rgba($redi-blue, 1);
+  }
+}
+
+.addJob-button-plus {
+  font-size: 32px;
+  cursor: pointer;
+  font-weight: 400;
+  color: $white;
+}
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
