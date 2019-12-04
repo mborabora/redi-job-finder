@@ -1,12 +1,13 @@
 import React from 'react';
 import './Hero.scss';
 
+import Searchbar from '../Searchbar/Searchbar'
+
 const Hero = () => {
   return (
-    <div>
-      <div className="hero-wrapper">
-       
-      </div>
+    <div className="hero-wrapper">
+      <Searchbar />
+      
     </div>
   );
 };
