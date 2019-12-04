@@ -20,9 +20,9 @@ const JobListings = () => {
     <div className='container'>
       <div className='row joblistings-wrapper'>
         {
-          jobs.map((job) => {
+          jobs.map((job, index) => {
             return (
-              <div className="card-wrapper" style={findColor(job.location)}>
+              <div className="card-wrapper" style={findColor(job.location)} key={index}>
                 <div className="card-location">{job.location}</div>
                 <div className="card-position">{job.company}</div>
                 <div className="card-description">
