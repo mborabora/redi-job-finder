@@ -22,6 +22,11 @@ const AddJob = () => {
         placeholder="Profession"
         class="hero-input hero-input-profession"
       />
+       <input
+        type="text"
+        placeholder="Link"
+        class="hero-input hero-input-link"
+      />
       <button className="hero-button">
         Add job
       </button>

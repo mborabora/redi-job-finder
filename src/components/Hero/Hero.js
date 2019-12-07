@@ -2,11 +2,14 @@ import React from 'react';
 import AddJob from '../AddJob/AddJob';
 import './Hero.scss';
 
+import Searchbar from '../Searchbar/Searchbar'
+
 const Hero = () => {
   return (
+
     <div>
       <div className="hero-wrapper">
-        <div className="hero-headline">Welcome to ReDI Job Finder</div>
+        <div className="hero-headline">Your ReDI Job Finder</div>
         <div className="hero-content">
           <input
             type="text"
