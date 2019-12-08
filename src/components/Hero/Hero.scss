@@ -46,10 +46,11 @@ input {
   }
 }
 
-button {
+a {
   outline: none;
   border: none;
   cursor: pointer;
+  text-decoration: none;
   box-shadow: 0 10rem 20rem rgba(0, 0, 0, 0.5);
   transition: all 0.4s;
   &.hero-button {

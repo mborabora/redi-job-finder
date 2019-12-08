@@ -1,4 +1,5 @@
 @import '../../../src/styles/Breakpoints.scss';
+@import '../../../src/styles/Colors.scss';
 
 .joblistings-wrapper {
   flex-wrap: wrap;
@@ -7,31 +8,57 @@
 }
 
 .card-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    min-width: 400px;
-    max-width: 400px;
-    box-shadow: 0 8px 40px -12px rgba(0,0,0,0.3);
-    padding: 20px;
-    margin: 15px 20px;
-    border-radius: 5px;
-    transition: all .3s;
-    &:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  position: relative;
+  min-width: 400px;
+  max-width: 400px;
+  box-shadow: 0 8px 40px -12px rgba(0,0,0,0.3);
+  padding: 20px;
+  margin: 15px 20px;
+  border-radius: 5px;
+  transition: all .3s;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
+}
+
+.cards-headline {
+  color: $light-grey-2;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.card-save {
+  position: absolute;
+  letter-spacing: 0.66px;
+  color: $white;
+  top: 20px;
+  right: 20px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-weight: 300;
+  font-size: smaller;
+  cursor: pointer;
+  background-color: rgba($redi-orange, .8);
+  &:hover {
+    background-color: $redi-orange;
+  }
+}
 
 .card-location {
-    font-size: small;
-    letter-spacing: 2px;
-    font-weight: 300;
+  font-size: small;
+  letter-spacing: 2px;
+  font-weight: 300;
 }
 
 .card-position {
-    font-size: x-large;
-    font-weight: 500;
-    padding: 16px 0;
+  font-size: x-large;
+  font-weight: 500;
+  padding: 16px 0;
 }
 
 .card-content {
@@ -42,11 +69,11 @@
 }
 
 .card-description {
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.3px;
-    max-height: 100px;
-    overflow: scroll;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  max-height: 100px;
+  overflow: scroll;
 }
 
 .card-button-wrapper {
@@ -54,10 +81,10 @@
 }
 
 .card-information {
-    font-size: small;
-    padding: 15px 0;
-    font-weight: lighter;
-  };
+  font-size: small;
+  padding: 15px 0;
+  font-weight: lighter;
+};
 
 .card-button {
   background-color: rgb(25, 25, 41);
@@ -70,4 +97,67 @@
   font-size: 16px;
   max-width: 180px;
   border-radius: 5px;
+}
+
+.saved-jobs {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  &-count {
+    background-color: $redi-orange;
+    padding: 16px;
+    position: fixed;
+    position: relative;
+    letter-spacing: 2px;
+    font-weight: 500;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    color: $white;
+    border-radius: 3px;
+    z-index: 100;
+    box-shadow: 0 8px 40px -12px rgba(0,0,0,0.3);
+  }
+  &-icon {
+    position: absolute;
+    top: 10px;
+    left: 182px;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 100;
+    background-color: $redi-blue;
+  }
+  &-details {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    width: 150px;
+    opacity: 0;
+    background-color: $white;
+    visibility: hidden;
+    transition: all .2s;
+    z-index: 100;
+    & .saved-job-detail {
+      font-size: 16px;
+      padding: 8px 0;
+      line-height: 24px;
+      hyphens: auto;
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba($light-grey-2, .8);
+      }
+    }
+  }
+  &-count:hover ~ &-details {
+    padding: 8px 16px;
+    border-radius: 3px;
+    box-shadow: 0 8px 40px -12px rgba(0,0,0,0.3);
+    opacity: 1;
+    visibility: visible;
+  }
 }

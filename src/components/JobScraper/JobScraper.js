@@ -5,7 +5,7 @@ var cheerio = require("cheerio");
 var app = express();
 
 app.get("/", function(req, res) {
-  const link = "https://de.indeed.com/developer-Jobs-in-deutschland";
+  const link = "https://de.indeed.com/jobs?q=Programmierer&l=deutschland";
 
   let jobList = [];
   axios.get(link).then(response => {
@@ -33,7 +33,7 @@ app.get("/", function(req, res) {
     });
 
     fs.writeFile(
-      "./src/jobScraping.json",
+      "../../../src/jobScraping.json",
       JSON.stringify(jobList, null, 4),
       function(err) {
         console.log(

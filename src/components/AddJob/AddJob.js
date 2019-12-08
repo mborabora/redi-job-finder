@@ -27,9 +27,9 @@ const AddJob = () => {
         placeholder="Link"
         class="hero-input hero-input-link"
       />
-      <button className="hero-button">
-        Add job
-      </button>
+      <a className="hero-button">
+        SUBMIT
+      </a>
     </div>
   ) : null;
 
